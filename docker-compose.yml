@@ -1,0 +1,30 @@
+version: '3.9'
+
+services:
+  db:
+    container_name: postgres-lol #hostname
+    image: postgres
+    networks:
+      - postgres-lol
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=123456
+
+  cloudbeaver:
+    depends_on: #depende del servicio db
+      - db
+    image: dbeaver/cloudbeaver-ee:latest
+    networks:
+      - postgres-lol
+    ports:
+      - 8080:8978
+    volumes:
+      - cloudbeaver-data:/var/cloudbeaver/workspace
+
+networks:
+  postgres-lol:
+
+volumes: #en este apartado se crea el volumen
+  postgres-data:
+  cloudbeaver-data:
