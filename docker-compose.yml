@@ -45,3 +45,7 @@ volumes:
   #     - 8978:8978
   #   volumes:
   #     - cloudbeaver-data:/var/cloudbeaver/workspace
+
+# INSERT INTO "CHAMPIONS" ("CHAMPS_ID", "CHAMPS_NAME", "CHAMPS_HEALTH", "CHAMPS_AD", "CHAMPS_AP", "CHAMPS_MP", "CHAMPS_MANA")
+# VALUES 
+# (1, 'Ashe', 600, 75, 0, 300, 250),
