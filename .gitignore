@@ -9,6 +9,7 @@ __pycache__/
 # Distribution / packaging
 .Python
 build/
+venv/
 develop-eggs/
 dist/
 downloads/
@@ -150,6 +151,8 @@ venv.bak/
 .mypy_cache/
 .dmypy.json
 dmypy.json
+bd.sql
+
 
 # Pyre type checker
 .pyre/
