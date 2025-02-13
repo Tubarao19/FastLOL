@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+from typing import Optional
 
 #se importa pydantic y se crea una clase
 #la cual creara un modelo basado en la bd representado en clases de python
