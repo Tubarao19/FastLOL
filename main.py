@@ -24,7 +24,7 @@ async def get_champs():
     finally:#se ejecuta independiente de si funciono o no el try
         cursor.close()#como buena practica se cierra el cursor o consulta
         conn.close()
-        
+
 @app.get('/skill')
 async def get_skill():
     cursor = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)#regresar datos en Json
