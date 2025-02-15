@@ -2,12 +2,6 @@
 
 Owner: MIGUEL EDUARDO MONSALVO MANJARRES
 
-<aside>
-<img src="https://www.notion.so/icons/list-indent_green.svg" alt="https://www.notion.so/icons/list-indent_green.svg" width="40px" /> *Tabla de contenido*
-
-</aside>
-
-[https://github.com/Tubarao19/FastLOL](https://github.com/Tubarao19/FastLOL)
 
 [FastAPI](https://fastapi.tiangolo.com/#installation)
 
