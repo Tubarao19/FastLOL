@@ -62,7 +62,7 @@ volumes:
 
 ## Creacion de base de datos
 
-![image.png](proyecto%20FastLOL%20119f70346dd780d898fdd8c0350c68e2/image.png)
+![image.png](image.png)
 
 - aqui se tiene en cuenta los datos que se quieren extraer y estrapolar del juego a la base de datos en especifico, el cual se realiza en un diagrama de entidad relacion para hacerlo mas entendible a la hora de traspasarlo a la bd
 - posteriormente se pasan a codigo de postgres y luego se insertan los primeros 5 datos obtenidos para posteriores testeos tanto de la bd como de la api
