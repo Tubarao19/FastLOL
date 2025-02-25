@@ -42,15 +42,22 @@ CREATE TABLE "CHAMPIONS" (
   "CHAMPS_MANA" INT
 );
 
+ALTER SEQUENCE "CHAMPIONS_CHAMPS_ID_seq" RESTART WITH 1;
+
 CREATE TABLE "SKILLS" (
   "SKILL_ID" SERIAL PRIMARY KEY,
-  "SKILL_NAME" VARCHAR,
-  "SKILL_MANA_COST" INT,
+  "SKILL_NAME" VARCHAR NOT NULL,
+  "SKILL_MANA_COST" INT NOT NULL,
   "CHAMPS_ID" INT NOT NULL,
   CONSTRAINT "CHAMPS_FK" FOREIGN KEY ("CHAMPS_ID") REFERENCES "CHAMPIONS"("CHAMPS_ID")
   ON DELETE CASCADE 
   ON UPDATE CASCADE
 );
+
+-- Asegurar que la secuencia inicie en 1
+ALTER SEQUENCE "SKILLS_SKILL_ID_seq" RESTART WITH 1;
+
+
 --no agregar datos a los id cuando son autoincrementables o desincronizan las tablas
 
 -- insert into - values / create - post
