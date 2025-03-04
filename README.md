@@ -1,7 +1,5 @@
 # proyecto FastLOL
 
-Owner: MIGUEL EDUARDO MONSALVO MANJARRES
-
 
 [FastAPI](https://fastapi.tiangolo.com/#installation)
 
