@@ -1,7 +1,7 @@
-from core.config import settings
+from core.config import conexion # Para acceder
 import psycopg2
 
-def get_connection():
-    if not settings.DATABASE_URL:
+def test_connection():
+    if not conexion.DATABASE_URL:
         raise ValueError("No se encontro la conexion a la bd registrada")
-    return psycopg2.connect(settings.DATABASE_URL)
+    return psycopg2.connect(conexion.DATABASE_URL)

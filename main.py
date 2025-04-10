@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 import psycopg2
 import psycopg2.extras
-from databases.connection import conn #traigo la variable de conexion a postgres
+from databases.connection import conn, cursor #traigo la variable de conexion a postgres
 from models.champions import Champ, Skill#datos de models
 
 app = FastAPI()
