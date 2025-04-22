@@ -39,3 +39,35 @@ async def create_champ(champ:Champ):# se crea una variable que almacene lo de py
         raise HTTPException(status_code=500, detail=f"Error al agregar el champion: {err}")
     except ValueError as e:#se usa cuando hubo un error de un dato digitado sea por el tipo
         raise HTTPException(status_code=403, detail=f"Error al en algun dato a guardar del champion:{e}")
+    
+
+
+async def update_champ(champ:Champ, id:int):
+    query = """UPDATE "CHAMPIONS"
+            SET "CHAMPS_NAME" = %s,
+                "CHAMPS_AD" = %s,
+                "CHAMPS_HEALTH" = %s,
+                "CHAMPS_AP" = %s,
+                "CHAMPS_MP" = %s,
+                "CHAMPS_MANA" = %s
+            WHERE "CHAMPS_ID" = %s;"""
+    
+    values = (champ.CHAMPS_NAME,
+            champ.CHAMPS_HEALTH,
+            champ.CHAMPS_AD,
+            champ.CHAMPS_AP,
+            champ.CHAMPS_MP,
+            champ.CHAMPS_MANA,
+            id)
+    
+    try:
+        returning = execute_query(query, values)
+        if not returning:#sino devuelve dato alguno
+            raise HTTPException(status_code=404, detail=f"Error champion no encontrado.")
+        champion = returning[0]#en caso que devuelva info la base de datos
+        return {"message":"Champ actualizado correctamente",
+                "update_data": champion}#muestra todos los datos que fueron cambiados
+    except psycopg2.Error as err:
+        raise HTTPException(status_code=500, detail=f"Error al agregar el champion: {err}")
+    except ValueError as e:#se usa cuando hubo un error de un dato digitado sea por el tipo
+        raise HTTPException(status_code=403, detail=f"Error al en algun dato a guardar del champion:{e}")
