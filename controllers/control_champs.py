@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from services.service_champs import get_champs, create_champ, update_champ
+from services.service_champs import get_champs, create_champ, update_champ, delete_champ
 from models.champions import Champ 
 
 router = APIRouter()
@@ -16,3 +16,8 @@ async def register_champ(champ:Champ): #se llama el modelo de pydantic y se pasa
 @router.put('/champ/{id}')
 async def refresh_champ(champ:Champ, id:int):
     return await update_champ(champ, id)
+
+
+@router.delete('/champ/{id}')
+async def supr_champ(id:int):
+    return await delete_champ(id)
