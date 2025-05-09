@@ -1,6 +1,6 @@
 from fastapi import HTTPException
-from databases.cursor import execute_query
-from models.champions import Skill
+from shared.infra.db.cursor import execute_query
+from shared.domain.models.champions import Skill
 import psycopg2
 
 

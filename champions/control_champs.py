@@ -1,6 +1,6 @@
 from fastapi import APIRouter
-from services.service_champs import get_champs, create_champ, update_champ, delete_champ
-from models.champions import Champ 
+from service_champs import get_champs, create_champ, update_champ, delete_champ
+from shared.domain.models.champions import Champ 
 
 router = APIRouter()
 

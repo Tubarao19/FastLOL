@@ -1,4 +1,4 @@
-from core.config import conexion # Para acceder
+from infra import conexion # Para acceder
 import psycopg2
 
 def test_connection():

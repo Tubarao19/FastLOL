@@ -1,6 +1,6 @@
 import psycopg2.extras
 from contextlib import contextmanager #lib para crear funcion que abre y cierra recursos
-from databases.connection import test_connection
+from connection import test_connection
 
 @contextmanager
 def get_cursor():

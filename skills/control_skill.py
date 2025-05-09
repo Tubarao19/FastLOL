@@ -1,6 +1,6 @@
 from fastapi import APIRouter
-from services.service_skill import *
-from models.champions import Skill
+from skills.service_skill import *
+from shared.domain.models.champions import Skill
 
 router = APIRouter()
 
